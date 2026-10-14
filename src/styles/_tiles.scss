@@ -1,0 +1,71 @@
+@use "variables" as *;
+
+.tile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px 56px;
+  max-width: 900px;
+  margin: 16px auto 0;
+}
+
+.tile {
+  position: relative;
+  display: block;
+  color: $ink;
+  text-decoration: none;
+  background: $peach;
+  border-radius: 20px;
+  padding: 5px 5px 8px;
+  aspect-ratio: 1.35 / 1;
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+    color: $ink;
+  }
+
+  &__media {
+    position: absolute;
+    inset: 5px 5px 8px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f3d9c4, #e9b995);
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__label {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    background: #f8f8f8;
+    border-radius: 16px 16px 24px 24px;
+    padding: 6px 8px 6px 14px;
+    min-height: 40px;
+  }
+  &__title {
+    font-size: 1rem;
+    line-height: 1.15;
+  }
+  &__subtitle {
+    display: block;
+    font-size: 0.72rem;
+    color: $muted;
+    line-height: 1.2;
+  }
+  &__go {
+    flex: 0 0 auto;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: $accent;
+    color: #fff;
+    display: grid;
+    place-items: center;
+  }
+}

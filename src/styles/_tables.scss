@@ -1,0 +1,59 @@
+@use "variables" as *;
+
+.data-table-wrap {
+  border: 1px solid $brand;
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  font-size: 0.8rem;
+
+  th {
+    background: $peach-soft;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 14px 12px;
+    text-align: left;
+    white-space: nowrap;
+  }
+  td {
+    padding: 12px;
+    font-weight: 600;
+    color: #4a4a4a;
+    border-top: 1px solid #f4dccb;
+  }
+  tbody tr:nth-child(even) td {
+    background: $peach-row;
+  }
+  .col-name {
+    color: $brand;
+  }
+  .col-room {
+    color: $link-blue;
+  }
+  .col-day {
+    color: $brand-line;
+  }
+  .col-num {
+    text-align: right;
+    color: $brand-line;
+  }
+
+  tfoot td {
+    background: $peach-soft;
+    font-size: 0.72rem;
+    color: $muted;
+    border-top: 1px solid $brand;
+  }
+}
+
+.section-title {
+  font-size: 1rem;
+  margin: 24px 0 8px;
+}

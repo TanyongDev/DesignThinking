@@ -1,0 +1,301 @@
+// @use "variables" as *;
+
+// .timetable-card {
+//   background: $peach;
+//   border: 1px solid $brand;
+//   border-radius: 18px;
+//   padding: 14px;
+//   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+// }
+
+// .timetable-toolbar {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   gap: 8px 12px;
+//   background: $peach-soft;
+//   border: 1px solid $peach;
+//   border-radius: 10px;
+//   padding: 14px 18px;
+//   margin-bottom: 18px;
+
+//   .term-select {
+//     background: $peach;
+//     border: 1px solid $accent;
+//     border-radius: 10px;
+//     font-size: 0.9rem;
+//     padding: 6px 12px;
+//     max-width: 200px;
+//   }
+//   .chip {
+//     font-size: 0.7rem;
+//     border-radius: 999px;
+//     padding: 2px 10px;
+//     &--pink {
+//       background: #fcc9d3;
+//       color: #b02a46;
+//     }
+//     &--cyan {
+//       background: #d9f6fb;
+//       color: #0a8aa0;
+//     }
+//     &--green {
+//       background: #e3f7e5;
+//       color: #2a7a3a;
+//     }
+//     &--amber {
+//       background: #ffe3b3;
+//       color: #8a5200;
+//     }
+//   }
+//   .export-btn {
+//     font-size: 0.7rem;
+//     background: #fff;
+//     border: 1px solid $danger;
+//     color: $danger;
+//     border-radius: 6px;
+//     padding: 2px 10px;
+//   }
+// }
+
+// .timetable {
+//   background: $surface;
+//   border: 1px solid $brand;
+//   border-radius: 12px;
+//   overflow-x: auto;
+
+//   &__inner {
+//     min-width: 960px;
+//     padding: 12px 12px 12px 8px;
+//   }
+//   &__head,
+//   &__row {
+//     display: grid;
+//     grid-template-columns: 72px 1fr;
+//   }
+//   &__hours {
+//     position: relative;
+//     height: 32px;
+//     span {
+//       position: absolute;
+//       top: 0;
+//       transform: translateX(-50%);
+//       font-size: 0.95rem;
+//       color: $brand;
+//     }
+//   }
+//   &__day {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     color: $brand;
+//     font-size: 1rem;
+//   }
+//   &__track {
+//     position: relative;
+//     height: 86px;
+//     background-image: repeating-linear-gradient(
+//       to right,
+//       $brand 0,
+//       $brand 1px,
+//       transparent 1px,
+//       transparent calc(100% / var(--cols))
+//     );
+//     border-right: 1px solid $brand;
+//   }
+// }
+
+// .slot {
+//   position: absolute;
+//   top: 6px;
+//   bottom: 6px;
+//   border-left: 4px solid var(--slot-c);
+//   background: var(--slot-bg);
+//   color: var(--slot-c);
+//   border-radius: 4px 8px 8px 4px;
+//   padding: 6px 8px;
+//   font-size: 0.72rem;
+//   line-height: 1.25;
+//   overflow: hidden;
+
+//   &__time {
+//     display: block;
+//     margin-top: 4px;
+//     font-size: 0.66rem;
+//   }
+//   &--blue {
+//     --slot-c: #4263eb;
+//     --slot-bg: #e8ecff;
+//   }
+//   &--red {
+//     --slot-c: #e5484d;
+//     --slot-bg: #ffe8e9;
+//   }
+//   &--orange {
+//     --slot-c: #e8703a;
+//     --slot-bg: #fff0e3;
+//   }
+//   &--yellow {
+//     --slot-c: #c9a227;
+//     --slot-bg: #fff3e2;
+//   }
+//   &--cyan {
+//     --slot-c: #1aa6bf;
+//     --slot-bg: #e0fbff;
+//   }
+//   &--green {
+//     --slot-c: #3c8a3c;
+//     --slot-bg: #e6fde8;
+//   }
+// }
+
+@use "variables" as *;
+
+.timetable-card {
+  background: $peach;
+  border: 1px solid $brand;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.timetable-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 12px;
+  background: $peach-soft;
+  border: 1px solid $peach;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+
+  .term-select {
+    background: $peach;
+    border: 1px solid $accent;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    max-width: 200px;
+  }
+  .chip {
+    font-size: 0.7rem;
+    border-radius: 999px;
+    padding: 2px 10px;
+    &--pink {
+      background: #fcc9d3;
+      color: #b02a46;
+    }
+    &--cyan {
+      background: #d9f6fb;
+      color: #0a8aa0;
+    }
+    &--green {
+      background: #e3f7e5;
+      color: #2a7a3a;
+    }
+    &--amber {
+      background: #ffe3b3;
+      color: #8a5200;
+    }
+  }
+  .export-btn {
+    font-size: 0.7rem;
+    background: #fff;
+    border: 1px solid $danger;
+    color: $danger;
+    border-radius: 6px;
+    padding: 2px 10px;
+  }
+}
+
+.timetable {
+  background: $surface;
+  border: 1px solid $brand;
+  border-radius: 12px;
+  overflow-x: auto;
+
+  &__inner {
+    min-width: $timetable-min-width;
+    padding: 12px 12px 12px 8px;
+  }
+  &__head,
+  &__row {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+  }
+  &__hours {
+    position: relative;
+    height: 32px;
+    span {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      font-size: 0.95rem;
+      color: $brand;
+    }
+  }
+  &__day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $brand;
+    font-size: 1rem;
+  }
+  &__track {
+    position: relative;
+    height: $timetable-row-height;
+    background-image: repeating-linear-gradient(
+      to right,
+      $brand 0,
+      $brand 1px,
+      transparent 1px,
+      transparent calc(100% / var(--cols))
+    );
+    border-right: 1px solid $brand;
+  }
+}
+
+.slot {
+  position: absolute;
+  top: 6px;
+  bottom: 6px;
+  border-left: 4px solid var(--slot-c);
+  background: var(--slot-bg);
+  color: var(--slot-c);
+  border-radius: 4px 8px 8px 4px;
+  padding: $slot-padding;
+  font-size: $slot-font-size;
+  line-height: 1.25;
+  overflow: hidden;
+
+  &__time {
+    display: block;
+    margin-top: 4px;
+    font-size: $slot-time-font-size;
+  }
+  &--blue {
+    --slot-c: #4263eb;
+    --slot-bg: #e8ecff;
+  }
+  &--red {
+    --slot-c: #e5484d;
+    --slot-bg: #ffe8e9;
+  }
+  &--orange {
+    --slot-c: #e8703a;
+    --slot-bg: #fff0e3;
+  }
+  &--yellow {
+    --slot-c: #c9a227;
+    --slot-bg: #fff3e2;
+  }
+  &--cyan {
+    --slot-c: #1aa6bf;
+    --slot-bg: #e0fbff;
+  }
+  &--green {
+    --slot-c: #3c8a3c;
+    --slot-bg: #e6fde8;
+  }
+}

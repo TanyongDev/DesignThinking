@@ -1,0 +1,27 @@
+// Design tokens (ตามดีไซน์ Figma) — แก้สี/ขนาดที่นี่ที่เดียว
+$brand: #8b3a26;
+$brand-line: #c8502b;
+$accent: #ff9a2e;
+$peach: #ffd0a6;
+$peach-soft: #ffeadb;
+$peach-row: #fff5ec;
+$sidebar-bg: #d9d9d9;
+$sidebar-active: #a8a8a8;
+$surface: #fdfbf9;
+$ink: #1d1d1d;
+$muted: #6b6b6b;
+$link-blue: #2a46c8;
+$danger: #e5484d;
+$success: #2f9e5b;
+
+$sidebar-width: 270px;
+$radius: 14px;
+$bp-lg: 992px;
+
+
+// Timetable — ปรับขนาดกรอบวิชาที่นี่
+$timetable-min-width: 1500px; // ความกว้างขั้นต่ำของตาราง (กว้างขึ้น = กรอบวิชากว้างขึ้น, เลื่อนซ้าย-ขวาบนจอเล็ก)
+$timetable-row-height: 150px; // ความสูงของแต่ละวัน (สูงขึ้น = กรอบวิชาสูงขึ้น)
+$slot-font-size: 0.9rem; // ขนาดตัวอักษรในกรอบวิชา
+$slot-time-font-size: 0.82rem; // ขนาดตัวอักษรบรรทัดเวลา
+$slot-padding: 10px 12px;

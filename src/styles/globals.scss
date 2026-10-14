@@ -1,0 +1,17 @@
+@use "variables" as *;
+@use "layout";
+@use "tiles";
+@use "timetable";
+@use "tables";
+@use "courses";
+@use "forms";
+
+:root {
+  --bs-body-font-family: var(--font-thai), var(--font-latin), system-ui, sans-serif;
+  --bs-body-color: #{$ink};
+  --bs-body-bg: #{$surface};
+}
+
+body {
+  min-height: 100vh;
+}
